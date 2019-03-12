@@ -11,7 +11,7 @@
         </li>
       </ul>
       <div class="wrapper random-items-wrapper">
-        <h2>Outfit Randomizer</h2>
+        <h2>Our Recommendations</h2>
         <p>Try these on for size!</p>
         <section class="random-items">
           <div class="random-items__item">
@@ -30,7 +30,7 @@
             <p><em>${{ randomFootwear.price }}</em></p>
           </div>
         </section>
-        <button class="btn btn--grey" @click="shuffleRandomProducts">Shuffle</button>
+        <button class="btn btn--grey" @click="recommendRandomOutfit">Shuffle</button>
       </div>
   </div>
 </template>
@@ -43,9 +43,7 @@ export default {
   name: "genderOverview",
   mixins: [ imagePath ],
   created() {
-    this.randomTopId = this.randomProductIdByCategory('Shirts'),
-    this.randomBottomId = this.randomProductIdByCategory('Pants'),
-    this.randomFootwearId = this.randomProductIdByCategory('Shoes')
+    this.recommendRandomOutfit()
   },
   data () {
     return {
@@ -80,7 +78,7 @@ export default {
       let randomIndex = Math.floor(Math.random() * allProductsInCategory.length);
       return allProductsInCategory[randomIndex].id;
     },
-    shuffleRandomProducts() {
+    recommendRandomOutfit() {
       this.randomTopId = this.randomProductIdByCategory('Shirts'),
       this.randomBottomId = this.randomProductIdByCategory('Pants'),
       this.randomFootwearId = this.randomProductIdByCategory('Shoes')
