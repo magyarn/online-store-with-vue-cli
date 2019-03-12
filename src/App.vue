@@ -41,7 +41,14 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
-a { text-decoration: none; }
+a { 
+  text-decoration: none;
+  color: #2c3e50;
+  transition: all .3s ease;
+  &:hover {
+    color: #42b983
+  }
+}
 #nav {
   padding: 30px;
   a {

@@ -14,21 +14,21 @@
         <h2>Our Recommendations</h2>
         <p>Try these on for size!</p>
         <section class="random-items">
-          <div class="random-items__item">
+          <router-link :to="{ name: 'product', params: { id: randomTop.id}}" class="random-items__item">
             <img class="product-image" :src="makeImagePath(randomTop)" alt="">
             <p class="product-title">{{ randomTop.name }}</p>
             <p><em>${{ randomTop.price }}</em></p>
-          </div>
-          <div class="random-items__item">
+          </router-link>
+          <router-link :to="{ name: 'product', params: { id: randomBottom.id}}" class="random-items__item">
             <img class="product-image" :src="makeImagePath(randomBottom)" alt="">
             <p class="product-title">{{ randomBottom.name }}</p>
             <p><em>${{ randomBottom.price }}</em></p>
-          </div>
-          <div class="random-items__item">
+          </router-link>
+          <router-link :to="{ name: 'product', params: { id: randomFootwear.id}}" class="random-items__item">
             <img class="product-image" :src="makeImagePath(randomFootwear)" alt="">
             <p class="product-title">{{ randomFootwear.name }}</p>
             <p><em>${{ randomFootwear.price }}</em></p>
-          </div>
+          </router-link>
         </section>
         <button class="btn btn--grey" @click="recommendRandomOutfit">Shuffle</button>
       </div>
@@ -79,8 +79,8 @@ export default {
       return allProductsInCategory[randomIndex].id;
     },
     recommendRandomOutfit() {
-      this.randomTopId = this.randomProductIdByCategory('Shirts'),
-      this.randomBottomId = this.randomProductIdByCategory('Pants'),
+      this.randomTopId = this.randomProductIdByCategory('Shirts')
+      this.randomBottomId = this.randomProductIdByCategory('Pants')
       this.randomFootwearId = this.randomProductIdByCategory('Shoes')
     }
   }
