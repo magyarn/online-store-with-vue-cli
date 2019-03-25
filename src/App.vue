@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav" class="wrapper flex-col flex-col--align-center">
-      <h1 class="flex-col--2">MyStore</h1>
+      <h1 class="flex-col--2">My Store</h1>
       <div class="flex-col--2 nav-items">
         <router-link to="/" class="nav-items__item">Home</router-link>
         <router-link 
