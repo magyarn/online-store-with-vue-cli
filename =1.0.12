@@ -1,0 +1,15 @@
+yarn upgrade v1.5.1
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Rebuilding all packages...
+success Saved lockfile.
+success Saved 3 new dependencies.
+info Direct dependencies
+├─ tar@4.4.8
+└─ webpack@4.28.2
+info All dependencies
+├─ acorn-dynamic-import@3.0.0
+├─ tar@4.4.8
+└─ webpack@4.28.2
+Done in 6.02s.
